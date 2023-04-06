@@ -15,7 +15,13 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
+    void updateUi(QString buff);
+    void updateBar(int x);
+    int buffSize = 480;
 private:
     Ui::MainWindow *ui;
+
+signals:
+    void updateProgressBar(int value);
 };
 #endif // MAINWINDOW_H
